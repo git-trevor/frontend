@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: linear-gradient(rgba(64, 140, 189), 50%, rgb(153, 245, 224));
+  color: rgb(64, 140, 189);
+}
+
+.imgRedonda{
+  width:75px;
+  height:75px;
+  border-radius:200px;
+  border:1px solid rgba(224, 242, 254);
+}
