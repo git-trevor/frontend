@@ -18,6 +18,16 @@ function PetCard({pet}){
     const { deletePet } = usePets();
 
     var sexo = pet.gender;
+    var day = pet.age_day;
+    var month = pet.age_month;
+    var str_day = day.toString();
+    var str_month = month.toString();
+
+    if(str_day.length === 1)
+        str_day = '0' + str_day
+
+    if(str_month.length === 1)
+        str_month = '0' + str_month
 
     if(sexo === 'H')
         sexo = 'Hembra';
@@ -99,9 +109,9 @@ function PetCard({pet}){
             </div>
             <div className="bg-sky-100 flex flex-col items-center pb-5 rounded-2xl">
                 <img className="w-52 h-52 rounded-full shadow-lg" src={image} />
-                <h5 className="font-Caveat font-bold text-xl my-3">Nombre: {pet.name}</h5>
+                <h5 className="font-Caveat font-bold text-2xl my-3">Nombre: {pet.name}</h5>
                 <span className="font-Caveat text-xl">Sexo: {sexo}</span>
-                <span className="font-Caveat text-xl">Fecha de Nacimiento: {pet.age_day} / {pet.age_month} / {pet.age_year}</span>
+                <span className="font-Caveat text-xl">Fecha de Nacimiento: {str_day} / {str_month} / {pet.age_year}</span>
             </div>
             {/* <div className="flex gap-x-2 items-center justify-center px-6 pb-2">
                 <Link to={'/pet/' + pet._id} className="bg-transparent hover:bg-cyan-600 text-sky-500

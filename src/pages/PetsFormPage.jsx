@@ -89,7 +89,7 @@ function PetsFormPage(){
                             {...register("url_img")}
                         />
                     </div> */}
-                    <div className="flex justify-end items-center relative">
+                    <div className="flex justify-end items-center relative my-3">
                         <MdPets size={40} className='bg-sky-100 mx-1 rounded-md'/>
                         <input type="text"
                             className='w-full bg-sky-50 text-sky-500 px-4 py-2 my-2 rounded-md'
@@ -109,7 +109,7 @@ function PetsFormPage(){
                             <p>El nombre de la mascota debe ser máximo de 15 caracteres</p>
                         )
                     }
-                    <div className="flex justify-start items-center relative">
+                    <div className="flex justify-start items-center relative my-3">
                         <PiGenderIntersexFill size={40} className='bg-sky-100 mx-0.5 rounded-md'/>
                         {/* <input type="text"
                             className='w-full bg-sky-50 text-sky-500 px-4 py-2 my-2 rounded-md'
@@ -161,7 +161,7 @@ function PetsFormPage(){
                         )
                     }
                     {/* [Inicio] Datos para registrar la fecha de nacimiento */}
-                    <div className="flex justify-normal relative ">
+                    <div className="flex justify-normal relative my-3">
                         <PiCalendarBlankBold size={35} className='bg-sky-100 mx-1 rounded-md'/>
                         <h1 className="text-left text-xl">Fecha de Nacimiento</h1>
                     </div>
@@ -186,11 +186,6 @@ function PetsFormPage(){
                                     <option value={28}>28</option><option value={29}>29</option><option value={30}>30</option>
                                     <option value={31}>31</option>
                                 </select>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                                    </svg>
-                                </div>
                             </div>
                             {
                                 errors.age_day?.type==="required" && (
@@ -221,9 +216,6 @@ function PetsFormPage(){
                                     <option value={7}>Julio</option><option value={8}>Agosto</option><option value={9}>Septiembre</option>
                                     <option value={10}>Octubre</option><option value={11}>Noviembre</option><option value={12}>Diciembre</option>
                                 </select>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                </div>
                             </div>
                             {
                                 errors.age_month?.type==="required" && (
@@ -257,7 +249,7 @@ function PetsFormPage(){
                             }
                     </div>
                     {/* [Fin] Datos para registrar la fecha de nacimiento */}
-                    <div className='flex items-center justify-center'>
+                    <div className='flex items-center justify-center my-3'>
                         <button type='submit'
                             className="bg-transparent hover:bg-cyan-600 text-sky-500
                             font-semibold hover:text-white mb-2 py-2 px-4 border border-cyan-600 hover:border-transparent rounded">

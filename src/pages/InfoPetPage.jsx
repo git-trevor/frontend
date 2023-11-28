@@ -19,7 +19,8 @@ function InfoPetPage(){
                 pet_breed: '',
                 pet_weight: 0.0,
                 pet_traits: '',
-                pet_sterilized: 'N'
+                pet_sterilized: 'N',
+                pet_id: ''
             }
         }
     );
@@ -32,17 +33,25 @@ function InfoPetPage(){
         async function loadInfoPet(){
             const infoPet = await getInfoPet(params.id);
 
-            if(infoPet){
+            if(infoPet.length !== 0){
+                // console.log('Hola');
+                // console.log(infoPet);
+                // console.log(infoPet.pet_breed);
+                // console.log(infoPet.pet_weight);
+                // console.log(infoPet.pet_traits);
+                // console.log(infoPet.pet_sterilized);
                 setValue("pet_breed", infoPet.pet_breed);
                 setValue("pet_weight", infoPet.pet_weight);
                 setValue("pet_traits", infoPet.pet_traits);
                 setValue("pet_sterilized", infoPet.pet_sterilized);
+                setValue("pet_id", params.id);
             } else{
-                console.log('Holi');
+                // console.log('Holi');
                 setValue("pet_breed", '');
                 setValue("pet_weight", 0.0);
                 setValue("pet_traits", '');
                 setValue("pet_sterilized", 'N');
+                setValue("pet_id", params.id);
             }
         }
 
