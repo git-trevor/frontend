@@ -34,19 +34,12 @@ function InfoPetPage(){
             const infoPet = await getInfoPet(params.id);
 
             if(infoPet.length !== 0){
-                // console.log('Hola');
-                // console.log(infoPet);
-                // console.log(infoPet.pet_breed);
-                // console.log(infoPet.pet_weight);
-                // console.log(infoPet.pet_traits);
-                // console.log(infoPet.pet_sterilized);
                 setValue("pet_breed", infoPet.pet_breed);
                 setValue("pet_weight", infoPet.pet_weight);
                 setValue("pet_traits", infoPet.pet_traits);
                 setValue("pet_sterilized", infoPet.pet_sterilized);
                 setValue("pet_id", params.id);
             } else{
-                // console.log('Holi');
                 setValue("pet_breed", '');
                 setValue("pet_weight", 0.0);
                 setValue("pet_traits", '');
