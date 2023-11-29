@@ -32,6 +32,7 @@ function InfoPetPage(){
     useEffect(()=>{
         async function loadInfoPet(){
             const infoPet = await getInfoPet(params.id);
+            console.log(infoPet);
 
             if(infoPet.length !== 0){
                 setValue("pet_breed", infoPet.pet_breed);
